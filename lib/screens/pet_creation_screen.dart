@@ -97,7 +97,6 @@ class PetCreationScreenState extends State<PetCreationScreen> {
                 },
               ),
               const SizedBox(height: 10),
-
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
                 decoration: BoxDecoration(
@@ -144,7 +143,7 @@ class PetCreationScreenState extends State<PetCreationScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                 ),
                 child: const Text(
-                  'Create Pet',
+                  'Create PetLove',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
               ),
