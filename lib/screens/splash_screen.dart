@@ -1,1 +1,0 @@
-//Splash screen deu errado >:(

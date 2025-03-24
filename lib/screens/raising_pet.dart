@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import 'store_screen.dart';
+
 class PetHomeScreen extends StatelessWidget {
   final String petName;
   final int petAge;
@@ -10,7 +12,8 @@ class PetHomeScreen extends StatelessWidget {
     Key? key,
     required this.petName,
     required this.petAge,
-    required this.petAnimation, required String petType,
+    required this.petAnimation,
+    required String petType,
   }) : super(key: key);
 
   @override
@@ -40,6 +43,10 @@ class PetHomeScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.menu, color: Colors.white),
           onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => StoreScreen()),
+            );
             // Ação do menu de atividades
           },
         ),
@@ -85,6 +92,10 @@ class PetHomeScreen extends StatelessWidget {
             right: 20,
             child: FloatingActionButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StoreScreen()),
+                );
                 //loja de acessórios
               },
               backgroundColor: Colors.white,

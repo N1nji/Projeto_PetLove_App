@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:flutter_application_1/screens/pet_creation_screen.dart'; // Tela de criação do pet (Por enquanto só funciona o Gato)
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,8 +33,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Após 7 segundos, vai para a tela de criação do pet (Tem que mostrar um pouco a animação do Nyan Cat :D)
-    Future.delayed(const Duration(seconds: 7), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(builder: (context) => const PetCreationScreen()),
       );
@@ -47,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Color(0xFFB0003A),
       appBar: AppBar(
         title: const Text(
-          'Pet Love', 
+          'Pet Love',
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.w900,
@@ -79,8 +80,9 @@ class _SplashScreenState extends State<SplashScreen> {
               fit: BoxFit.contain,
             ),
           ),
-          const SizedBox(height: 20), // Espaço entre a animação e a barra de carregamento
-
+          const SizedBox(
+            height: 20,
+          ), // Espaço entre a animação e a barra de carregamento
           // Barrinha de carregamento
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 50),
