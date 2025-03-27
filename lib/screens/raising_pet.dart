@@ -9,12 +9,12 @@ class PetHomeScreen extends StatelessWidget {
   final String petAnimation;
 
   const PetHomeScreen({
-    Key? key,
+    super.key,
     required this.petName,
     required this.petAge,
     required this.petAnimation,
     required String petType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
